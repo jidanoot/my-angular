@@ -9,15 +9,17 @@
 			<div>Register</div>
 		</div>
 		<br>
-		<div class="register">
-			<input type="text" placeholder="username" name="user"><br>
-			<input type="password" placeholder="password" name="password"><br>
-			<input type="password" placeholder="confirm password" name="confirm password"><br>
-			<input type="button" value="Register" [routerLink]="['/']">
-			<br>
-			<br>
-			<a [routerLink]="['/login']">Login</a>
-		</div>
+		<form [formGroup]='registerForm' (ngSubmit)='doRegister()'>
+			<div class="register">
+				<input type="text" placeholder="username" formControlName="email"><br>
+				<input type="password" placeholder="password" formControlName="password"><br>
+				<input type="password" placeholder="confirm password" formControlName="confirmPassword"><br>
+				<input type="submit" value="Register">
+				<br>
+				<br>
+				<a [routerLink]="['/login']">Login</a>
+			</div>
+		</form>
 
 </body>
 

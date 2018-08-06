@@ -25,15 +25,16 @@
 			<div>Login</div>
 		</div>
 		<br>
-		<div class="login">
-			<input type="text" placeholder="username" name="user"><br>
-			<input type="password" placeholder="password" name="password"><br>
-			<input type="button" value="Login" [routerLink]="['/']">
-			<br>
-			<br>
-			<a [routerLink]="['/register']" >Don't have an account</a>
-		</div>
-
+		<form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+			<div class="login">
+				<input type="text" placeholder="username" formControlName="email" ><br>
+				<input type="password" placeholder="password" formControlName="password"><br>
+				<input type="submit" value="Login">
+				<br>
+				<br>
+				<a [routerLink]="['/register']" >Don't have an account</a>
+			</div>
+		</form>
 </body>
 
 </html>

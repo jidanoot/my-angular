@@ -91,7 +91,7 @@ body{
 	margin-top: 10px;
 }
 
-.register input[type=button]{
+.register input[type=submit]{
 	width: 260px;
 	height: 35px;
 	background: #fff;
@@ -106,11 +106,11 @@ body{
 	margin-top: 10px;
 }
 
-.register input[type=button]:hover{
+.register input[type=submit]:hover{
 	opacity: 0.8;
 }
 
-.register input[type=button]:active{
+.register input[type=submit]:active{
 	opacity: 0.6;
 }
 
@@ -124,7 +124,7 @@ body{
 	border: 1px solid rgba(255,255,255,0.9);
 }
 
-.register input[type=button]:focus{
+.register input[type=submit]:focus{
 	outline: none;
 }
 
